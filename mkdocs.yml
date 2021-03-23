@@ -1,0 +1,67 @@
+site_name: Micro-Laravel
+# repo_url: https://github.com/jaimeranchal/ohdaw 
+site_description: Notas rápidas sobre Laravel 8.x
+site_author: Jaime Ranchal
+dev_addr: '127.0.0.1:8001'
+
+# Ajustes del tema
+theme:
+    language: es
+    name: material
+    features:
+        - navigation.tabs # 'tabs' en versiones más recientes
+    palette:
+        scheme: default
+        primary: deep purple
+        accent: indigo
+    font:
+        text: Rubik
+        code: Fira Code
+    icon:
+        logo: material/book-open-blank-variant
+
+# Extensiones
+markdown_extensions:
+    - toc:
+        permalink: True
+    - admonition
+    - def_list
+    - pymdownx.details
+    # - pymdownx.highlight
+    - pymdownx.tabbed
+    - pymdownx.superfences
+    - pymdownx.inlinehilite
+    - pymdownx.keys
+    - pymdownx.snippets:
+        base_path: '/home/jaime/Desarrollo/Docs/Laravel/docs/'
+        check_paths: true
+# Plugins
+plugins:
+    - search
+    - print-site
+
+# Extra
+extra_javascript:
+    - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/highlight.min.js
+    - extra/js/config.js
+extra_css:
+    - extra/css/extra.css
+    - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/atelier-lakeside-light.min.css
+
+# Árbol de documentos
+nav:
+    - Inicio: 'index.md'
+    - 'Guía rápida':
+        - Consola:
+            - Composer: 'min/composer.md'  
+            - Artisan: 'min/artisan.md'  
+        - Modelos: 'min/eloquent.md'
+        - Controllers: 'min/controller.md'
+        - Rutas: 'min/rutas.md'
+        - CRUD: 'min/crud.md'
+        - Vistas: 'min/views.md'
+        - Roles: 'min/roles.md'
+        - Zonas: 'min/zones.md'
+    - 'Inicio de sesión': 'full/auth.md'
+    - 'Control de acceso': 'full/auto.md'
+    - 'Base de datos': 'full/bbdd.md'
