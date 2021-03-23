@@ -139,4 +139,36 @@ Las directivas que hay que conocer son:
     ```
 
 ## Formularios
+
+=== "Campos especiales"
+    - [protección CSRF](https://laravel.com/docs/8.x/csrf)
+    - Método (cuando no sea `post`)
+
+    ```blade
+    <form method="POST" action="/perfil">
+        @csrf
+        @method('PUT')
+        ...
+    </form>
+    ```
+
+=== "Errores"
+    ```blade
+    <label for="title">Título del post</label>
+    <input id="title" type="text" class="@error('title') is-invalid @enderror">
+
+    @error('title')
+        <div class="alert alert-danger">{{ $message }}</div>
+    @enderror
+
+    <label for="email">Email address</label>
+    <input id="email" type="email" class="@error('email', 'login') is-invalid @enderror">
+
+    @error('email', 'login')
+        <div class="alert alert-danger">{{ $message }}</div>
+    @enderror
+    ```
+
 ## Componentes
+
+Es una nueva cosa de Laravel 8. Mientras dejo un resumen aquí, ver la [documentación oficial](https://laravel.com/docs/8.x/blade#components)
