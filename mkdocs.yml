@@ -60,6 +60,7 @@ nav:
         - Rutas: 'min/rutas.md'
         - CRUD: 'min/crud.md'
         - Vistas: 'min/views.md'
+        - Middleware: 'min/middleware.md'
         - Roles: 'min/roles.md'
         - Zonas: 'min/zones.md'
     - 'Inicio de sesión': 'full/auth.md'
