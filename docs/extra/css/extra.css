@@ -1,16 +1,13 @@
-div.md-content h1,h2,h3,h4,h5,h6{
-    font-family: "Roboto Condensed", sans-serif;
-}
 div.md-content h1,h2,h3{
     border-bottom: 1px solid grey;
-}
-div.md-content article{
-    /*font-family: "Roboto Slab", Georgia, sans-serif;*/
-    font-size: 1.4em;
 }
 div.md-content li{
     line-height: 1.2;
 }
+/*div.md-content article{*/
+/*    /*font-family: "Roboto Slab", Georgia, sans-serif;*/*/
+/*    font-size: 1.4em;*/
+/*}*/
 
 /* El fondo del código debe leer el valor del tema escogido, no de mkdocs */
 /* Background color of a code snippet */

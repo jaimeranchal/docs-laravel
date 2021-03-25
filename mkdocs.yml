@@ -15,7 +15,7 @@ theme:
         primary: deep purple
         accent: indigo
     font:
-        text: Rubik
+        text: Nunito
         code: Fira Code
     icon:
         logo: material/book-open-blank-variant
@@ -55,14 +55,18 @@ nav:
         - Consola:
             - Composer: 'min/composer.md'  
             - Artisan: 'min/artisan.md'  
-        - Modelos: 'min/eloquent.md'
-        - Controllers: 'min/controller.md'
-        - Rutas: 'min/rutas.md'
-        - CRUD: 'min/crud.md'
-        - Vistas: 'min/views.md'
-        - Middleware: 'min/middleware.md'
-        - Roles: 'min/roles.md'
-        - Zonas: 'min/zones.md'
+        - 'Modelo de datos':
+            - Eloquent: 'min/eloquent.md'
+            - Seeders: 'min/seeding.md'
+        - Interfaz: 'min/views.md'
+        - Lógica:
+          - Controladores: 'min/controller.md'
+          - Rutas: 'min/rutas.md'
+          - Middleware: 'min/middleware.md'
+        - Ejemplos:
+          - CRUD: 'min/crud.md'
+          - 'Inicio de sesión': 'min/roles.md'
+          - 'Zonas de usuario': 'min/zones.md'
     - 'Inicio de sesión': 'full/auth.md'
     - 'Control de acceso': 'full/auto.md'
     - 'Base de datos': 'full/bbdd.md'
