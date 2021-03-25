@@ -11,9 +11,9 @@ theme:
     features:
         - navigation.tabs # 'tabs' en versiones más recientes
     palette:
-        scheme: default
+        scheme: slate
         primary: red
-        accent: deep purple
+        accent: lime
     font:
         text: Nunito
         code: Fira Code
@@ -27,7 +27,8 @@ markdown_extensions:
     - admonition
     - def_list
     - pymdownx.details
-    # - pymdownx.highlight
+    - pymdownx.highlight:
+        use_pygments: false
     - pymdownx.tabbed
     - pymdownx.superfences
     - pymdownx.inlinehilite
@@ -46,7 +47,8 @@ extra_javascript:
     - extra/js/config.js
 extra_css:
     - extra/css/extra.css
-    - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/atelier-lakeside-light.min.css
+    # - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/atelier-lakeside-light.min.css
+    - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/atom-one-dark.min.css
 
 # Árbol de documentos
 nav:
