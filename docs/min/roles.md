@@ -58,6 +58,7 @@ Lo primero es instalar un [kit de inicio](), por ejemplo, _Breeze_. Esto instala
     })->middleware(['auth'])->name('dashboard');
     ?>
     ```
+
 === "Http/Controllers" 
     ```sh
     # base
