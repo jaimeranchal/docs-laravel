@@ -11,9 +11,9 @@ theme:
     features:
         - navigation.tabs # 'tabs' en versiones más recientes
     palette:
-        scheme: slate
+        scheme: default
         primary: red
-        accent: yellow
+        accent: deep purple
     font:
         text: Nunito
         code: Fira Code
@@ -46,8 +46,7 @@ extra_javascript:
     - extra/js/config.js
 extra_css:
     - extra/css/extra.css
-    # - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/atelier-lakeside-light.min.css
-    - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/gruvbox-dark.min.css
+    - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/atelier-lakeside-light.min.css
 
 # Árbol de documentos
 nav:
