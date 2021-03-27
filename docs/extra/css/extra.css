@@ -4,6 +4,10 @@ div.md-content h1,h2,h3{
 div.md-content li{
     line-height: 1.2;
 }
+
+header.md-header, nav.md-tabs {
+    color: #21222C !important;
+}
 /*div.md-content article{*/
 /*    /*font-family: "Roboto Slab", Georgia, sans-serif;*/*/
 /*    font-size: 1.4em;*/

@@ -1,4 +1,4 @@
-site_name: Micro-Laravel
+site_name: microDocs - Laravel
 # repo_url: https://github.com/jaimeranchal/ohdaw 
 site_description: Notas rápidas sobre Laravel 8.x
 site_author: Jaime Ranchal
@@ -6,6 +6,8 @@ dev_addr: '127.0.0.1:8001'
 
 # Ajustes del tema
 theme:
+    logo: extra/img/favicon.ico
+    favicon: extra/img/favicon.ico
     language: es
     name: material
     features:
@@ -44,11 +46,13 @@ plugins:
 # Extra
 extra_javascript:
     - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/highlight.min.js
+    - extra/js/blade.min.js
     - extra/js/config.js
 extra_css:
     - extra/css/extra.css
+    - extra/css/atom-one-dark.css
     # - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/atelier-lakeside-light.min.css
-    - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/atom-one-dark.min.css
+    # - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/atom-one-dark.min.css
 
 # Árbol de documentos
 nav:

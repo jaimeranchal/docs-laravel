@@ -353,7 +353,6 @@ Los métodos para crear diferentes tipos de datos se llaman **formateadores**; a
         year()                                // año
         ?>
         ```
-        
     === "Internet"
         ```php
         <?php
@@ -368,7 +367,62 @@ Los métodos para crear diferentes tipos de datos se llaman **formateadores**; a
         ```
 === "Modificadores"
     Son tres:
+    - `unique()`: valores únicos
+    - `optional()`: a veces devuelve _null_
+    - `valid()`: sólo devuelve números validados por la función que se le pase
+    === "unique"
+        ```php
+        <?php
+        $values = [];
+        
+        for ($i = 0; $i < 10; $i++) {
+            // número aleatorio sin duplicados
+            $values []= $faker->unique()->randomDigit();
+        }
 
-    - `unique()`
-    - `optional()`
-    - `valid()`
+        print_r($values); // [4, 1, 8, 5, 0, 2, 6, 9, 7, 3]
+        ?>
+        ```
+    === "optional"
+        ```php
+        <?php
+        $values = [];
+
+        for ($i = 0; $i < 10; $i++) {
+            // a veces devuelve nulo
+            $values []= $faker->optional()->randomDigit();
+        }
+
+        print_r($values); // [1, 4, null, 9, 5, null, null, 4, 6, null]
+
+        // Se puede indicar un porcentaje (inverso) de aparición de nulos
+        $faker->optional($weight = 0.1)->randomDigit(); // 90% de que salga NULL
+        $faker->optional($weight = 0.9)->randomDigit(); // 10% de que salga NULL
+
+        // También se puede indicar un valor por defecto en lugar de nulo
+        $faker->optional($weight = 0.9, $default = 'mojo')->palabra(); // 10% de que salga 'mojo'
+        ?>
+        ```
+    === "valid"
+        ```php
+        <?php
+        $values = [];
+        $validarPares = function($digit) {
+            return $digit % 2 === 0;
+        };
+
+        for ($i = 0; $i < 10; $i++) {
+            $values []= $faker->valid($validarPares)->randomDigit();
+        }
+
+        // sólo devuelve números pares
+        print_r($values); // [0, 4, 8, 4, 2, 6, 0, 8, 8, 6]
+
+        // puede lanzar una excepción si no se puede cumplir la condición
+        try {
+            $faker->valid($validarPares)->randomElement([1,3,5,7,9]);
+        } catch (\OverflowException $e) {
+            echo "No hay un puñetero número par ahí!";
+        }
+        ?>
+        ```
