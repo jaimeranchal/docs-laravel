@@ -71,7 +71,7 @@ nav:
           - Middleware: 'min/middleware.md'
         - Ejemplos:
           - CRUD: 'min/crud.md'
-          - 'Inicio de sesión': 'min/roles.md'
+          - 'Inicio de sesión': 'min/auth.md'
           - 'Zonas de usuario': 'min/zones.md'
     - 'Inicio de sesión': 'full/auth.md'
     - 'Control de acceso': 'full/auto.md'

@@ -2,6 +2,9 @@
 
 Lo primero es instalar un [kit de inicio](), por ejemplo, _Breeze_. Esto instalará un conjunto de vistas, rutas y controladores:
 
+!!! note "Ojo laravelitas viejunos"
+    _Breeze_ usa [componentes](https://laravel.com/docs/8.x/blade#components), un nuevo invento de Laravel 8.x que sustituye la forma anterior de crear vistas mediante las directivas `@yield`, `@section` etc.
+
 === "Composer"
     ```sh
     composer require laravel/breeze --dev
@@ -76,7 +79,25 @@ Lo primero es instalar un [kit de inicio](), por ejemplo, _Breeze_. Esto instala
         VerifyEmailController.php
     ```
 
-### Roles de usuario
+## Usando Bootstrap
+
+Vale, no te va _Breeze_ y todo el rollo de los **componentes**, pero eres un máster de Bootstrap. Puedes instalar una interfaz de autentificación con Bootstrap súper fácil con **composer** y **npm**; ventaja, usa el antiguo sistema de plantillas heredadas ;)
+
+=== "Consola"
+```sh
+# Después de crear un proyecto vacío
+
+# 1. añadimos dependencias
+composer require laravel/ui 
+# 2. crea las vistas, controllers etc
+php artisan ui bootstrap --auth 
+# 3. instala las librerías css y js de Bootstrap
+npm install && npm run dev 
+```
+
+Listo, la vista principal por defecto después de hacer login es `home.blade.php` (no `dashboard`, como en _Breeze_). Hala, a tunear.
+
+## Roles de usuario
 
 Los pasos serían:
 

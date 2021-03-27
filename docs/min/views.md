@@ -172,3 +172,30 @@ Las directivas que hay que conocer son:
 ## Componentes
 
 Es una nueva cosa de Laravel 8. Mientras dejo un resumen aquí, ver la [documentación oficial](https://laravel.com/docs/8.x/blade#components)
+
+### Agregar Bootstrap
+
+Los pasos son simples:
+
+- [Descargar](https://getbootstrap.com/docs/5.0/getting-started/download/) las librerías CSS y Js de la versión de Bootstrap que queramos (compilado o no; al gusto)
+- Ir al directorio `public` y crear un directorio llamado `assets`
+- Copiar las carpetas `css/` y `js/` de Laravel con las de Bootstrap dentro de `public/assets`
+- También se pueden **reemplazar** directamente las carpetas `public/css` y `public/js` originales con las de Bootstrap.
+- Añadir el enlace a las librerías en las **plantillas blade** con la función `asset()`
+
+=== "ejemplo.vista.blade.php"
+    ```blade
+    <head>
+        <!-- ... -->
+        <!-- Librerías css -->
+        <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+    </head>
+    <body>
+
+        <!-- ... -->
+
+        <!-- Librerías javascript -->
+        <style src="{{ asset('js/bootstrap.js.css') }}">
+    </body>
+    
+    ```
