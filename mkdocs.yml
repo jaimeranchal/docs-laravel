@@ -64,15 +64,17 @@ nav:
         - 'Modelo de datos':
             - Eloquent: 'min/eloquent.md'
             - Seeders: 'min/seeding.md'
-        - Interfaz: 'min/views.md'
         - Lógica:
-          - Controladores: 'min/controller.md'
-          - Rutas: 'min/rutas.md'
-          - Middleware: 'min/middleware.md'
-        - Ejemplos:
-          - CRUD: 'min/crud.md'
-          - 'Inicio de sesión': 'min/auth.md'
-          - 'Zonas de usuario': 'min/zones.md'
-    - 'Inicio de sesión': 'full/auth.md'
-    - 'Control de acceso': 'full/auto.md'
+            - Controladores: 'min/controller.md'
+            - Middleware: 'min/middleware.md'
+        - Interfaz: 
+            - Vistas: 'min/views.md'
+            - Rutas: 'min/rutas.md'
+    - Ejemplos:
+        - CRUD: 'examples/crud.md'
+        - 'Inicio de sesión': 'examples/auth.md'
+        - 'Zonas de usuario': 'examples/zones.md'
+    - Documentación:
+        - 'Inicio de sesión': 'full/auth.md'
+        - 'Control de acceso': 'full/auto.md'
     - 'Base de datos': 'full/bbdd.md'
