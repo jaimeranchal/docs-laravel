@@ -316,8 +316,8 @@ Si queremos representar que un alumno puede tener muchos exámenes y a la vez, q
 === "Relaciones 1:1"
     ```php
     <?php
-    use App\Models\Alumno
-    use App\Models\Equipo
+    use App\Models\Alumno;
+    use App\Models\Equipo;
 
     // recuperar el equipo de un alumno
     $equipo = Alumno::find(1)->equipo;
@@ -328,8 +328,8 @@ Si queremos representar que un alumno puede tener muchos exámenes y a la vez, q
 === "Relaciones 1:N"
     ```php
     <?php
-    use App\Models\Alumno
-    use App\Models\Profesor
+    use App\Models\Alumno;
+    use App\Models\Profesor;
 
     // Mostrar todos los alumnos de un profesor
     $alumnos = Profesor::find(1)->alumnos;
