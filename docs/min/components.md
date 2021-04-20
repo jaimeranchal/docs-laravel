@@ -110,3 +110,44 @@ Por ejemplo, hemos definido dos clases css para un `div` y en la vista queremos 
         <!-- contenido del componente -->
     </div>
     ```
+
+## Slots
+
+Si queremos añadir contenido más complejo, que no sea adecuado insertar como propiedad, usamos `slots`:
+
+=== "Plantilla"
+    ```blade
+    <x-alert>
+        <x-slot name="title">
+            Título 1 (slot con nombre = variable)
+        </x-slot>
+
+        Texto del mensaje de alerta (slot anónimo)
+    </x-alert>
+    ```
+=== "alert.blade.php"
+    ```blade
+    <div {{$attributes->merge(['class' => "bg-$color-100 border-1-4 border-$color-500"])}} role="alert">
+        <p class="font-bold">{{$title}}</p>
+        <p>{{$slot}}</p>
+    </div>
+    ```
+=== "Alert.php"
+    ```php
+    <?php
+    class Alert extends Component
+    {
+        public $color
+
+        public function __construct($color = "verde")
+        {
+            $this->color = $color;
+        }
+
+        public function render()
+        {
+            return view('components.alert');
+        }
+    }
+    ```
+
