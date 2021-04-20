@@ -69,6 +69,7 @@ nav:
             - Middleware: 'min/middleware.md'
         - Interfaz: 
             - Vistas: 'min/views.md'
+            - Componentes: 'min/components.md'
             - Rutas: 'min/rutas.md'
     - Ejemplos:
         - CRUD: 'examples/crud.md'
